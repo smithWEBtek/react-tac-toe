@@ -1,0 +1,117 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+
+  &__title {
+    background-color: rgb(57, 57, 74);
+    border-radius: 10px;
+    color: rgb(247, 243, 243);
+    padding: 5px 10px;
+    margin-top: 0;
+
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    :hover {
+      color: rgb(34, 255, 0);
+    }
+
+  }
+
+  &__board {
+    border: 1px solid rgb(39, 28, 28);
+    border-radius: 10px;
+    background-color: lightgray;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  &__status {
+    background-color: rgb(167, 182, 182);
+    border: 1px solid rgb(39, 28, 28);
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 5px;
+    text-align: center;
+
+    &--message {
+      color: rgb(41, 80, 139);
+      align-self: center;
+    }
+
+    &--moves {
+      ul {
+        list-style: none;
+        margin: 10px;
+        padding: 0;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+.yellow {
+  background-color: rgb(216, 236, 100);
+  color: rgb(24, 21, 21);
+}
+
+.blue {
+  background-color: rgb(6, 53, 68);
+  color: #fff;
+}
+
+.green {
+  background-color: rgb(32, 167, 43);
+  color: #fff;
+}
+
+.selected {
+  font-weight: bold;
+  background-color: rgb(150, 144, 144);
+}
